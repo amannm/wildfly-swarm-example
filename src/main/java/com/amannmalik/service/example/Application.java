@@ -3,6 +3,8 @@ package com.amannmalik.service.example;
 import org.wildfly.swarm.container.Container;
 import org.wildfly.swarm.jaxrs.JAXRSDeployment;
 
+import java.util.List;
+
 /**
  * Created by Amann on 6/10/2015.
  */
@@ -15,7 +17,7 @@ public class Application {
         container.start();
 
         //example use of dnsjava. Commenting this back in will cause a NullPointerException ultimately caused by a missing class
-        //List<String> searchSuffixes = DnsLookup.getSearchSuffixes();
+        List<String> searchSuffixes = DnsLookup.getSearchSuffixes();
 
         //deploy endpoint
         JAXRSDeployment appDeployment = new JAXRSDeployment(container);
