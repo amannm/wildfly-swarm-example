@@ -11,28 +11,25 @@
     <packaging>jar</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <version.wildfly-swarm>1.0.0.Alpha3-SNAPSHOT</version.wildfly-swarm>
+        <version.wildfly-swarm>1.0.0.Alpha4-SNAPSHOT</version.wildfly-swarm>
         <maven.min.version>3.2.1</maven.min.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>dnsjava</groupId>
-            <artifactId>dnsjava</artifactId>
-            <version>2.1.7</version>
-        </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.ow2.asm</groupId>-->
-        <!--<artifactId>asm</artifactId>-->
-        <!--<version>5.0.4</version>-->
-        <!--</dependency>-->
-        <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>wildfly-swarm-weld-jaxrs</artifactId>
             <version>${version.wildfly-swarm}</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-ee</artifactId>
+            <version>${version.wildfly-swarm}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
